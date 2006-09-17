@@ -1,7 +1,7 @@
 
 # Tests for extref related code. See code block labeled "Extref fun"
 
-use Test::More qw|no_plan|;
+use Test::More tests => 5;
 
 use warnings;
 use strict;

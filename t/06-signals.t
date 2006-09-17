@@ -1,7 +1,7 @@
 
 # Tests for filehandle related code. See code block labeled "Filehandle fun"
 
-use Test::More qw|no_plan|;
+use Test::More tests => 18;
 
 use warnings;
 use strict;

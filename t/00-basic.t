@@ -1,7 +1,7 @@
 
 # Tests for session related api. see code block marked "Session fun".
 
-use Test::More qw|no_plan|;
+use Test::More tests => 3;
 
 use warnings;
 use strict;

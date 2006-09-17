@@ -1,7 +1,7 @@
 
 # Tests for alias related code. See code block labeled "Alias fun"
 
-use Test::More qw|no_plan|;
+use Test::More tests => 12;
 
 use warnings;
 use strict;
