@@ -16,7 +16,7 @@ POE debugging.
 
 =head1 WARNING
 
-B<This version of this module is certified against POE version 0.2601 and 
+B<This version of this module is certified against POE version 0.38 and 
 above. It will fail on any other POE version.>
 
 B<Further, this module requires perl v5.6.1 or above.>
@@ -33,8 +33,8 @@ our $VERSION = '1.'.sprintf "%04d", (qw($Rev$))[1];
 
 BEGIN {
 	use POE;
-	if($POE::VERSION < '0.2802') {
-		die(__PACKAGE__." is only certified for POE version 0.2802 and up and you are running POE version " . $POE::VERSION . ". Check CPAN for an appropriate version of ".__PACKAGE__.".");
+	if($POE::VERSION < '0.38') {
+		die(__PACKAGE__." is only certified for POE version 0.38 and up and you are running POE version " . $POE::VERSION . ". Check CPAN for an appropriate version of ".__PACKAGE__.".");
 	}
 }
 
@@ -893,9 +893,6 @@ __END__
 =head1 AUTHOR
 
 Matt Cashner (sungo@pobox.com)
-
-See L<http://perlwhore.com> for the latest on all of sungo's 
-modules.
 
 =head1 DATE
 

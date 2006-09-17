@@ -8,7 +8,7 @@ version_from    ('VERSION');
 license         ('bsd');
 
 requires        ('perl' => 5.006001);
-requires        ('POE'  => 0.29);
+requires        ('POE'  => 0.38);
 requires        ('Devel::Size');
 requires        ('Test::More');
 
