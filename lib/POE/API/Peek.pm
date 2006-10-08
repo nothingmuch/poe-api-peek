@@ -165,6 +165,24 @@ sub event_list {
 }
 # }}}
 
+# which_loop {{{
+
+=head2 which_loop
+
+  my $loop_name = $api->which_loop();
+
+Tell which Loop POE has decided to use. Returns the string name of the Loop
+module.
+
+=cut
+
+sub which_loop {
+	return POE::Kernel::poe_kernel_loop();
+}
+
+#}}}
+
+
 # }}}
 
 # Session fun {{{

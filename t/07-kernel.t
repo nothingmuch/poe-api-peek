@@ -59,6 +59,8 @@ sub _start {
 
 # }}}
 
+    is($api->which_loop(), 'POE::Loop::Select', 'which_loop() loop name check');
+
 }
 
 
