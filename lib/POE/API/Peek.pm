@@ -29,7 +29,7 @@ use 5.006001;
 use warnings;
 use strict;
 
-our $VERSION = '2.'.sprintf "%04d", (qw($Rev$))[1];
+our $VERSION = '2.10';
 
 BEGIN {
 	use POE;
