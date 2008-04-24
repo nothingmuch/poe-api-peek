@@ -609,14 +609,17 @@ sub event_queue_dump {
 	my $self = shift;
 	my $queue = $self->event_queue;
 	my @happy_queue;
+	my @queue = $queue->peek_items(sub { return 1; });
 
-	for (my $i = 0; $i < @$queue; $i++) {
+	my $i = 0;
+	foreach my $qitem (@queue) {
 		my $item = {};
-		$item->{ID} = $queue->[$i]->[ITEM_ID];
-		$item->{index} = $i;
-		$item->{priority} = $queue->[$i]->[ITEM_PRIORITY];
+		my ($priority, $id, $payload) = @$qitem;
+		 
+		$item->{ID} = $id;
+		$item->{index} = $i++;
+		$item->{priority} = $priority; 
 
-		my $payload = $queue->[$i]->[ITEM_PAYLOAD];
 		my $ev_name = $payload->[POE::Kernel::EV_NAME()];
 		$item->{event} = $ev_name;
 		$item->{source} = $payload->[POE::Kernel::EV_SOURCE];
