@@ -29,7 +29,7 @@ use 5.006001;
 use warnings;
 use strict;
 
-our $VERSION = '2.10';
+our $VERSION = '2.11';
 
 BEGIN {
 	use POE;
@@ -39,7 +39,6 @@ BEGIN {
 }
 
 use POE;
-use POE::Queue::Array;
 use Devel::Size qw(total_size);
 $Devel::Size::warn = 0;
 
