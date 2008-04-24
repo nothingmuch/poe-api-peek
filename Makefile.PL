@@ -14,8 +14,6 @@ requires        ('Test::More');
 
 build_requires  ('Test::Distribution');
 build_requires  ('Test::Pod::Coverage');
-build_requires  ('Module::Signature');
 
-sign            (1);
 
 WriteAll();
