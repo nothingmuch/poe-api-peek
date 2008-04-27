@@ -48,10 +48,9 @@ sub _start {
     my $queue;
     eval { $queue = $api->event_queue() };
     ok(!$@, "event_queue() causes no exceptions");
-    my $ref = ref $queue;
 
-    # work around a bug in POE::XS::Queue::Array. This will be fixed in the future.
-    if( ($ref eq 'POE::Queue') or ($ref eq 'POE::XS::Queue::Array') ) {
+    # work around a bug in pre 0.04 releases of POE::XS::Queue::Array.
+    if( ($queue->isa('POE::Queue')) or ($queue->isa('POE::XS::Queue::Array')) ) {
         pass('event_queue() returns POE::Queue object');
     } else {
         fail('event_queue() returns POE::Queue object');
