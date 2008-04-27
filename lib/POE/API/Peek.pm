@@ -15,7 +15,7 @@ POE debugging.
 
 =head1 WARNING
 
-B<This version of this module is certified against POE version 0.38 and 
+B<This version of this module is certified against POE version 1.0001 and 
 above. It will fail on any other POE version.>
 
 B<Further, this module requires perl v5.6.1 or above.>
@@ -32,8 +32,8 @@ our $VERSION = '2.11';
 
 BEGIN {
 	use POE;
-	if($POE::VERSION < '0.38') {
-		die(__PACKAGE__." is only certified for POE version 0.38 and up and you are running POE version " . $POE::VERSION . ". Check CPAN for an appropriate version of ".__PACKAGE__.".");
+	if($POE::VERSION < '1.0001') {
+		die(__PACKAGE__." is only certified for POE version 1.0001 and up and you are running POE version " . $POE::VERSION . ". Check CPAN for an appropriate version of ".__PACKAGE__.".");
 	}
 }
 

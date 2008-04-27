@@ -10,7 +10,7 @@ DESCRIPTION
     POE debugging.
 
 WARNING
-    This version of this module is certified against POE version 0.38 and
+    This version of this module is certified against POE version 1.0001 and
     above. It will fail on any other POE version.
 
     Further, this module requires perl v5.6.1 or above.
