@@ -252,6 +252,27 @@ sub is_session_child {
 }
 # }}}
 
+# get_session_parent {{{
+
+=head2 get_session_parent
+
+    my $parent = $api->get_session_parent($session);
+    my $parent = $api->get_session_parent();
+
+Get the parent for a given session. Takes one optional parameter, a
+POE::Session object. If this parameter is not provided, the method defaults to
+the currently active session. Returns a POE::Session object.
+
+=cut
+
+sub get_session_parent {
+	my $self = shift;
+	my $session = shift || $self->current_session();
+	return $poe_kernel->_data_ses_get_parent($session);
+}
+# }}}
+
+
 # resolve_session_to_ref {{{
 
 =head2 resolve_session_to_ref

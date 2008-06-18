@@ -1,7 +1,7 @@
 
 # Tests for session related api. see code block marked "Session fun".
 
-use Test::More tests => 34;
+use Test::More tests => 37;
 
 use warnings;
 use strict;
@@ -93,6 +93,15 @@ sub _start {
 	ok(!$@, "get_session_children() causes no exceptions.");  
 	is(scalar @children, 1, "get_session_children() returns the proper data when there is a child session");
 	is(ref $children[0], 'POE::Session', "data returned from get_session_children() contains a valid child session reference");
+
+# }}}
+
+# get_session_parent {{{
+
+	my $parent = eval { $api->get_session_parent };
+	ok(!$@, "get_session_parent() causes no exceptions.");
+	ok($parent, "parent returned");
+	is($parent, $poe_kernel, "our parent is the kernel");
 
 # }}}
 
